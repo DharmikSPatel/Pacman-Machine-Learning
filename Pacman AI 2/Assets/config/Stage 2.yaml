@@ -1,0 +1,12 @@
+behaviors:
+  Pacman:
+    trainer_type: ppo
+    max_steps: 50000000
+    summary_freq: 1000
+    reward_signals:
+        extrinsic:
+            strength: 1.0
+            gamma: 0.99
+        curiosity:
+            strength: 0.15
+            gamma: 0.99
